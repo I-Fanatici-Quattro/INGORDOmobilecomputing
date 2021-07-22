@@ -12,6 +12,7 @@ public class CameraGeneraEnemies : MonoBehaviour
     public GameObject AltroPrefab;
     public GameObject Bobs;
     public GameObject water;
+   
 
     //booleani per autorizzare la creazione dei cibi da inviare
 
@@ -73,25 +74,25 @@ public class CameraGeneraEnemies : MonoBehaviour
     private void spawnEnemy()
     {
         GameObject a = Instantiate(asteroidPrefab) as GameObject;
-        a.transform.position = new Vector2(screenBounds.x * 2, Random.Range(-1.5f,2.5f));
+        a.transform.position = new Vector2(screenBounds.x * 2, Random.Range(-0.57f,2.5f));
     }
 
     private void spawnEnemyDue()
     {
         GameObject b = Instantiate(bulletPrefab) as GameObject;
-        b.transform.position = new Vector2(screenBoundsDue.x * 2, Random.Range(-1.5f,2.5f));
+        b.transform.position = new Vector2(screenBoundsDue.x * 2, Random.Range(-0.57f, 2.5f));
     }
 
       private void spawnEnemyTre()
     {
         GameObject c = Instantiate(ciboPrefab) as GameObject;
-        c.transform.position = new Vector2(screenBoundsTre.x * 2, Random.Range(-1.5f,2.5f));
+        c.transform.position = new Vector2(screenBoundsTre.x * 2, Random.Range(-0.57f, 2.5f));
     }
 
     private void spawnEnemyQuattro()
     {
         GameObject d = Instantiate(AltroPrefab) as GameObject;
-        d.transform.position = new Vector2(screenBoundsQuattro.x * 2, Random.Range(-1.5f,2.5f));
+        d.transform.position = new Vector2(screenBoundsQuattro.x * 2, Random.Range(-0.57f,2.5f));
     }
 
     private void spawnEnemyCinque()//fagiolo di balzar

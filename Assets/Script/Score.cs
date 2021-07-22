@@ -6,9 +6,14 @@ using System;
 
 public class Score : MonoBehaviour
 {
+    //se perdi puoi scegliere di ricominciare, oppure di andare al menù
+    public string loadMenuRestart;
+
+    public string loadMenu;
+
     //timer per la vita
     public static float t=5f;//tempo che serve a misurare dopo quanto il conta chilometri si deve aggiornare
-    public static float t1=20f;//tempo timer dopo il quale il personaggio perde vita perché non si nutre
+    public static float t1=7f;//tempo timer dopo il quale il personaggio perde vita perché non si nutre
 
     //Punteggio chilometri
     [SerializeField]
@@ -23,6 +28,8 @@ public class Score : MonoBehaviour
 
     //vita Personaggio
     float maxhealth=100;
+
+   
 
     public float health;
 
@@ -65,12 +72,14 @@ public class Score : MonoBehaviour
         t1 -=Time.deltaTime;//se questo tempo scade, la vita si decrementa (NON STAI MANGIANDO)
         while(t1<0){
             DelVita();
-            t1=20;
+            t1=7;
         }
 
         if(health==0)
         {
-            Application.LoadLevel ("InGordo");
+            //ScriptName sn = gameObject.GetComponent<PauseMenu>();
+           // sn.PauseUnpause();
+            Application.LoadLevel (loadMenu);
         }
         
     }
@@ -82,13 +91,13 @@ public class Score : MonoBehaviour
             if(other.gameObject.tag=="good")
             {
                 AddScore(2);
-                t1=20;//ogni volta che il personaggio mangia il timer si resetta 
+                t1=7;//ogni volta che il personaggio mangia il timer si resetta 
             }
 
             if (other.gameObject.tag =="bad")
             {
                 DelVita();
-                t1=20;//ogni volta che il personaggio mangia il timer si resetta
+                t1=7;//ogni volta che il personaggio mangia il timer si resetta
             }
 
             if (other.gameObject.tag =="god")
@@ -96,21 +105,21 @@ public class Score : MonoBehaviour
                 //DelScore();
                 float ripristino=maxhealth-healtCurrent;
                 AddScore(ripristino);
-                t1=20;//ogni volta che il personaggio mangia, il timer si resetta 
+                t1=7;//ogni volta che il personaggio mangia, il timer si resetta 
             }
 
             if (other.gameObject.tag =="water")
             {
                 AddScore(5);
-                t1=20;//ogni volta che il personaggio mangia, il timer si resetta 
+                t1=7;//ogni volta che il personaggio mangia, il timer si resetta 
             }
         }
-        else{//se la vita è minore di un certo valore, hai comunque bisogno di un po' di zuccheri, quindi anche i cibi malsani possono salvarti
+        /*else{//se la vita è minore di un certo valore, hai comunque bisogno di un po' di zuccheri, quindi anche i cibi malsani possono salvarti
            if(other.gameObject.tag =="bad" || other.gameObject.tag=="good"){
                 AddScore(2);
                 t1=20;//ogni volta che il personaggio mangia il timer si resettA
             }
-        }
+        }*/
     }
 
     void AddScore(float a)//aggiungi il punteggio specificato dalla variabile a e, inoltre, in base alla percentuale della vita, aggiorna il colore della barra
