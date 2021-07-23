@@ -71,7 +71,7 @@ public class Score : MonoBehaviour
 
         t1 -=Time.deltaTime;//se questo tempo scade, la vita si decrementa (NON STAI MANGIANDO)
         while(t1<0){
-            DelVita();
+            DelVita(5);
             t1=7;
         }
 
@@ -90,13 +90,13 @@ public class Score : MonoBehaviour
         if(health>=20){//se la vita è maggiore di un certo valore, allora tutto normale
             if(other.gameObject.tag=="good")
             {
-                AddScore(2);
+                AddScore(6);
                 t1=7;//ogni volta che il personaggio mangia il timer si resetta 
             }
 
             if (other.gameObject.tag =="bad")
             {
-                DelVita();
+                DelVita(5);
                 t1=7;//ogni volta che il personaggio mangia il timer si resetta
             }
 
@@ -114,12 +114,6 @@ public class Score : MonoBehaviour
                 t1=7;//ogni volta che il personaggio mangia, il timer si resetta 
             }
         }
-        /*else{//se la vita è minore di un certo valore, hai comunque bisogno di un po' di zuccheri, quindi anche i cibi malsani possono salvarti
-           if(other.gameObject.tag =="bad" || other.gameObject.tag=="good"){
-                AddScore(2);
-                t1=20;//ogni volta che il personaggio mangia il timer si resettA
-            }
-        }*/
     }
 
     void AddScore(float a)//aggiungi il punteggio specificato dalla variabile a e, inoltre, in base alla percentuale della vita, aggiorna il colore della barra
@@ -142,10 +136,10 @@ public class Score : MonoBehaviour
         }
     }
 
-    void DelVita()//DECREMENTA la vita del personaggio quando entra in collisione con cibi non sani
+    void DelVita(float b)//DECREMENTA la vita del personaggio quando entra in collisione con cibi non sani
     {
-        float damage=5;
-        health -=damage;
+        
+        health -=b;
 
         if(health>40){
             healtCurrent = (health * barWidth) / maxhealth;

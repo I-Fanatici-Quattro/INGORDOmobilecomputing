@@ -12,7 +12,8 @@ public class CameraGeneraEnemies : MonoBehaviour
     public GameObject AltroPrefab;
     public GameObject Bobs;
     public GameObject water;
-   
+    public GameObject platform;
+
 
     //booleani per autorizzare la creazione dei cibi da inviare
 
@@ -20,6 +21,8 @@ public class CameraGeneraEnemies : MonoBehaviour
     bool b1=false;
     bool c1=false;
     bool d1=false;
+    bool e1=false;
+    bool w1 = false;
 
     float respawnGeneral=5f;
     //bool e1=false;
@@ -40,15 +43,18 @@ public class CameraGeneraEnemies : MonoBehaviour
      float respawnQuattroTime = 4.5f;
     private Vector2 screenBoundsQuattro;
 
-     float respawnCinqueTime =100f;
+     float respawnCinqueTime =50f;
     private Vector2 screenBoundsCinque;//fagiolo di balzar
     public Score h;
 
     float respawnSeiTime =20f;
     private Vector2 screenBoundsSei;
 
+    float respawnSetteTime = 15f;
+    private Vector2 screenBoundsSette;
 
-    
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -69,30 +75,33 @@ public class CameraGeneraEnemies : MonoBehaviour
 
         screenBoundsSei = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
         StartCoroutine(asteroidWaveSei());
+
+        screenBoundsSette = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
+        StartCoroutine(asteroidWaveSette());
     }
 
     private void spawnEnemy()
     {
         GameObject a = Instantiate(asteroidPrefab) as GameObject;
-        a.transform.position = new Vector2(screenBounds.x * 2, Random.Range(-0.57f,2.5f));
+        a.transform.position = new Vector2(screenBounds.x * 2, Random.Range(-0.57f,3.5f));
     }
 
     private void spawnEnemyDue()
     {
         GameObject b = Instantiate(bulletPrefab) as GameObject;
-        b.transform.position = new Vector2(screenBoundsDue.x * 2, Random.Range(-0.57f, 2.5f));
+        b.transform.position = new Vector2(screenBoundsDue.x * 2, Random.Range(-0.57f, 3.5f));
     }
 
       private void spawnEnemyTre()
     {
         GameObject c = Instantiate(ciboPrefab) as GameObject;
-        c.transform.position = new Vector2(screenBoundsTre.x * 2, Random.Range(-0.57f, 2.5f));
+        c.transform.position = new Vector2(screenBoundsTre.x * 2, Random.Range(-0.57f, 3.5f));
     }
 
     private void spawnEnemyQuattro()
     {
         GameObject d = Instantiate(AltroPrefab) as GameObject;
-        d.transform.position = new Vector2(screenBoundsQuattro.x * 2, Random.Range(-0.57f,2.5f));
+        d.transform.position = new Vector2(screenBoundsQuattro.x * 2, Random.Range(-0.57f,3.5f));
     }
 
     private void spawnEnemyCinque()//fagiolo di balzar
@@ -107,13 +116,19 @@ public class CameraGeneraEnemies : MonoBehaviour
         f.transform.position = new Vector2(screenBoundsCinque.x * 2, Random.Range(2f,3.4f));
     }
 
+    private void spawnEnemySette()//piattaforma
+    {
+        GameObject g = Instantiate(platform) as GameObject;
+        g.transform.position = new Vector2(screenBoundsSette.x * 2, Random.Range(0.6f, 1f));
+    }
+
     IEnumerator asteroidWave()
     {
         while (true)
         {
             respawnGeneral = Random.Range(2,5);
             yield return new WaitForSeconds(respawnGeneral);
-            if(b1==false && c1==false && d1==false){
+            if(b1==false && c1==false && d1==false && e1==false){
                 a1=true;
                 yield return new WaitForSeconds(respawnTime+(Random.Range(respawnTime+1, respawnTime+3)));
                 spawnEnemy();
@@ -128,7 +143,8 @@ public class CameraGeneraEnemies : MonoBehaviour
         {
             respawnGeneral = Random.Range(2,5);
             yield return new WaitForSeconds(respawnGeneral);
-            if(a1==false && c1==false && d1==false){
+            if(a1==false && c1==false && d1==false && e1==false)
+            {
                 b1=true;
                 respawnDueTime = Random.Range(respawnTime+2, respawnTime+3);
                 yield return new WaitForSeconds(respawnDueTime);
@@ -144,7 +160,8 @@ public class CameraGeneraEnemies : MonoBehaviour
         {
             respawnGeneral = Random.Range(2,5);
             yield return new WaitForSeconds(respawnGeneral);
-             if(a1==false && b1==false && d1==false){
+             if(a1==false && b1==false && d1==false && e1==false)
+            {
                 c1=true;
                 respawnTreTime = Random.Range(respawnDueTime+3, respawnDueTime+5);
                 yield return new WaitForSeconds(respawnTreTime);
@@ -160,7 +177,7 @@ public class CameraGeneraEnemies : MonoBehaviour
         {
             respawnGeneral = Random.Range(2,5);
             yield return new WaitForSeconds(respawnGeneral);
-             if(a1==false && b1==false && c1==false){
+             if(a1==false && b1==false && c1==false && e1==false){
                 d1=true;
                 respawnQuattroTime = Random.Range(respawnTreTime+3, respawnTreTime+4);
                 yield return new WaitForSeconds(respawnQuattroTime);
@@ -169,6 +186,8 @@ public class CameraGeneraEnemies : MonoBehaviour
             }
         }
     }
+
+    
 
     IEnumerator asteroidWaveCinque()//fagiolo
     {
@@ -189,9 +208,26 @@ public class CameraGeneraEnemies : MonoBehaviour
     {
         while (true)
         {
-           respawnSeiTime = Random.Range(respawnSeiTime+3, respawnSeiTime+4);
+            w1 = true;
+            respawnSeiTime = Random.Range(respawnSeiTime+3, respawnSeiTime+4);
             yield return new WaitForSeconds(respawnSeiTime);
             spawnEnemySei();
+            w1 = false;
+        }
+    }
+
+    IEnumerator asteroidWaveSette()
+    {
+        while (true)
+        {
+            respawnGeneral = Random.Range(2,6);
+            yield return new WaitForSeconds(respawnGeneral);
+            if (a1 == true || b1 == true || c1 == true || d1 == true || w1 == true){
+                e1 = true;
+                yield return new WaitForSeconds(6);
+                spawnEnemySette();
+                e1 = false;
+            }
         }
     }
 }

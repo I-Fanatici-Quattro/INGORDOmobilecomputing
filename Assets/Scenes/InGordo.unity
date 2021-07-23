@@ -1401,6 +1401,8 @@ MonoBehaviour:
     type: 3}
   Bobs: {fileID: 2638321928545934993, guid: 62a13b95410c53f40b356e972a4f05d6, type: 3}
   water: {fileID: 997815504473373577, guid: ca5a1f49f92bf15499302403c55eb050, type: 3}
+  platform: {fileID: 3074349521362558477, guid: 3ab608106e558d54989ad369660e770d,
+    type: 3}
   h: {fileID: 1816010525}
 --- !u!20 &519420031
 Camera:
@@ -2764,7 +2766,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1177174835}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.44, y: -1.51, z: -56.25}
+  m_LocalPosition: {x: -8.44, y: -1.65, z: -56.25}
   m_LocalScale: {x: 0.66073, y: 0.66073, z: 0.66073}
   m_Children: []
   m_Father: {fileID: 0}
@@ -4820,7 +4822,7 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -0.7436733, y: 3.9241579}
+  - {x: -0.82199574, y: 1.6031455}
   - {x: -0.7183647, y: -1.1907792}
 --- !u!4 &1880829743
 Transform:

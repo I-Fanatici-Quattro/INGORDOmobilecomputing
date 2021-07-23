@@ -13,20 +13,32 @@ public class Pavimento3 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        tempo -= Time.deltaTime;
         transform.position -= new Vector3 (velocitaTerreno*Time.deltaTime,0,0);
         if(transform.position.x <= -3.32)
         {
             transform.position =new Vector3(48.33f,transform.position.y,0f);
         }
-        if(v.scoreK>=5 && !ver){//arrivato a 5 km  la velocità del pavimento aumenta
-            velocitaTerreno+=5;
-            ver=true;
+        if (((v.scoreK+1)%5==0 || (v.scoreM+1)%4==0) && !ver)
+        {//arrivato a 5 km  la velocità del pavimento aumenta
+            ver = true;
+            velocitaTerreno += 5;
+        }
+
+        while (tempo<0)
+        {
+            if (ver)
+            {
+                velocitaTerreno = 10;
+                ver = false;
+            }
+            tempo = 10;
         }
     }
 }
