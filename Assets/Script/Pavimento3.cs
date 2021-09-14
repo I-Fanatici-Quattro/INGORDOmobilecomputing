@@ -25,7 +25,7 @@ public class Pavimento3 : MonoBehaviour
         {
             transform.position =new Vector3(48.33f,transform.position.y,0f);
         }
-        if (((v.scoreK+1)%5==0 || (v.scoreM+1)%4==0) && !ver)
+        if (((v.scoreK+1)%3==0 || (v.scoreM+1)%4==0) && !ver)
         {//arrivato a 5 km  la velocità del pavimento aumenta
             ver = true;
             velocitaTerreno += 5;
