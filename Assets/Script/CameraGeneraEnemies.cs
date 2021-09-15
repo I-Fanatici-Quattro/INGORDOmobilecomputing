@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -132,7 +132,7 @@ public class CameraGeneraEnemies : MonoBehaviour
                 a1=true;
                 yield return new WaitForSeconds(respawnTime+(Random.Range(respawnTime+1, respawnTime+3)));
                 spawnEnemy();
-                yield return new WaitForSeconds(respawnTime + (Random.Range(respawnTime + 2, respawnTime + 4)));
+                yield return new WaitForSeconds(respawnTime + (Random.Range(respawnTime + 1, respawnTime + 2)));
                 if (respawnGeneral == 2)
                     spawnEnemyDue();
                 if (respawnGeneral == 3)
@@ -158,7 +158,7 @@ public class CameraGeneraEnemies : MonoBehaviour
                 respawnDueTime = Random.Range(respawnTime+2, respawnTime+3);
                 yield return new WaitForSeconds(respawnDueTime);
                 spawnEnemyDue();
-                yield return new WaitForSeconds(respawnTime + (Random.Range(respawnTime + 2, respawnTime + 4)));
+                yield return new WaitForSeconds(respawnTime + (Random.Range(respawnTime + 1, respawnTime + 2)));
                 if (respawnGeneral == 2)
                     spawnEnemy();
                 if (respawnGeneral == 3)
@@ -184,7 +184,7 @@ public class CameraGeneraEnemies : MonoBehaviour
                 respawnTreTime = Random.Range(respawnDueTime+3, respawnDueTime+5);
                 yield return new WaitForSeconds(respawnTreTime);
                 spawnEnemyTre();
-                yield return new WaitForSeconds(respawnTime + (Random.Range(respawnTime + 2, respawnTime + 4)));
+                yield return new WaitForSeconds(respawnTime + (Random.Range(respawnTime + 1, respawnTime + 2)));
                 if (respawnGeneral == 2)
                     spawnEnemyDue();
                 if (respawnGeneral == 3)
@@ -209,7 +209,7 @@ public class CameraGeneraEnemies : MonoBehaviour
                 respawnQuattroTime = Random.Range(respawnTreTime+3, respawnTreTime+4);
                 yield return new WaitForSeconds(respawnQuattroTime);
                 spawnEnemyQuattro();
-                yield return new WaitForSeconds(respawnTime + (Random.Range(respawnTime + 2, respawnTime + 4)));
+                yield return new WaitForSeconds(respawnTime + (Random.Range(respawnTime + 1, respawnTime + 2)));
                 if (respawnGeneral == 2)
                     spawnEnemyDue();
                 if (respawnGeneral == 3)
@@ -262,7 +262,7 @@ public class CameraGeneraEnemies : MonoBehaviour
                 e1 = true;
                 yield return new WaitForSeconds(6);
                 spawnEnemySette();
-                yield return new WaitForSeconds(respawnTime + (Random.Range(respawnTime + 2, respawnTime + 4)));
+                yield return new WaitForSeconds(respawnTime + (Random.Range(respawnTime + 1, respawnTime + 2)));
                 if (respawnGeneral == 2)
                     spawnEnemyDue();
                 if (respawnGeneral == 3)

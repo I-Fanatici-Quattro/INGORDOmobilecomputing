@@ -81,7 +81,7 @@ public class Score : MonoBehaviour
 
         t1 -=Time.deltaTime;//se questo tempo scade, la vita si decrementa (NON STAI MANGIANDO)
         while(t1<0){
-            DelVita(5);
+            DelVita(25);
             t1=50;
         }
 
@@ -89,6 +89,7 @@ public class Score : MonoBehaviour
         {
             //ScriptName sn = gameObject.GetComponent<PauseMenu>();
             // sn.PauseUnpause();
+            healthBar.rectTransform.sizeDelta = new Vector2(0, barHeight);
             PauseGame();
             gameOverScreen.SetUp(scoreK, scoreM);
             //Application.LoadLevel(loadMenu);
@@ -103,13 +104,13 @@ public class Score : MonoBehaviour
         if(health>=1 && health<=100){//se la vita è maggiore di un certo valore, allora tutto normale
             if(other.gameObject.tag=="good")
             {
-                AddScore(5);
+                AddScore(25);
                 t1=50;//ogni volta che il personaggio mangia il timer si resetta 
             }
 
             if (other.gameObject.tag =="bad")
             {
-                DelVita(50);
+                DelVita(25);
                 t1=50;//ogni volta che il personaggio mangia il timer si resetta
             }
 
@@ -123,7 +124,7 @@ public class Score : MonoBehaviour
 
             if (other.gameObject.tag =="water")
             {
-                AddScore(5);
+                AddScore(25);
                 t1=50;//ogni volta che il personaggio mangia, il timer si resetta 
             }
         }

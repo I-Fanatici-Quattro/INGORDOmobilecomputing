@@ -55,6 +55,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\GameManager.cs" />
+     <Compile Include="Assets\GameOverScreen.cs" />
      <Compile Include="Assets\Gordo\Demo\Prefabs\DAChkBox\Scripts\DAChkBox.cs" />
      <Compile Include="Assets\Gordo\Demo\Scripts\GordoDemo.cs" />
      <Compile Include="Assets\Gordo\Prefabs\DALogo\Scripts\DALogo.cs" />
@@ -82,6 +84,7 @@
      <Compile Include="Assets\Scripts\IndividuaRisoluzione.cs" />
      <Compile Include="Assets\Scripts\MainMenu.cs" />
      <Compile Include="Assets\Scripts\PauseMenu.cs" />
+     <Compile Include="Assets\Scripts\SnsShare.cs" />
      <Compile Include="Assets\Vita.cs" />
      <Compile Include="Assets\timerPunteggio.cs" />
      <None Include="Assets\Udemy UI Starter\Font\About.txt" />
@@ -646,6 +649,14 @@
  </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="NativeShare.Editor.csproj">
+      <Project>{CC9CBF1F-B95B-F4F0-2627-1D5FBF225AC7}</Project>
+      <Name>NativeShare.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="NativeShare.Runtime.csproj">
+      <Project>{2D1FB01A-4923-2D4C-021D-BD29DDEA4987}</Project>
+      <Name>NativeShare.Runtime</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
