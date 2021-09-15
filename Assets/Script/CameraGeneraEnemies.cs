@@ -83,25 +83,25 @@ public class CameraGeneraEnemies : MonoBehaviour
     private void spawnEnemy()
     {
         GameObject a = Instantiate(asteroidPrefab) as GameObject;
-        a.transform.position = new Vector2(screenBounds.x * 2, Random.Range(-0.57f,3.5f));
+        a.transform.position = new Vector2(screenBounds.x * 2, Random.Range(-1.5f, 3.5f));
     }
 
     private void spawnEnemyDue()
     {
         GameObject b = Instantiate(bulletPrefab) as GameObject;
-        b.transform.position = new Vector2(screenBoundsDue.x * 2, Random.Range(-0.57f, 3.5f));
+        b.transform.position = new Vector2(screenBoundsDue.x * 2, Random.Range(-1.5f, 3.5f));
     }
 
       private void spawnEnemyTre()
     {
         GameObject c = Instantiate(ciboPrefab) as GameObject;
-        c.transform.position = new Vector2(screenBoundsTre.x * 2, Random.Range(-0.57f, 3.5f));
+        c.transform.position = new Vector2(screenBoundsTre.x * 2, Random.Range(-1.5f, 3.5f));
     }
 
     private void spawnEnemyQuattro()
     {
         GameObject d = Instantiate(AltroPrefab) as GameObject;
-        d.transform.position = new Vector2(screenBoundsQuattro.x * 2, Random.Range(-0.57f,3.5f));
+        d.transform.position = new Vector2(screenBoundsQuattro.x * 2, Random.Range(-1.5f, 3.5f));
     }
 
     private void spawnEnemyCinque()//fagiolo di balzar
@@ -132,7 +132,16 @@ public class CameraGeneraEnemies : MonoBehaviour
                 a1=true;
                 yield return new WaitForSeconds(respawnTime+(Random.Range(respawnTime+1, respawnTime+3)));
                 spawnEnemy();
-                a1=false;
+                yield return new WaitForSeconds(respawnTime + (Random.Range(respawnTime + 2, respawnTime + 4)));
+                if (respawnGeneral == 2)
+                    spawnEnemyDue();
+                if (respawnGeneral == 3)
+                    spawnEnemyTre();
+                if (respawnGeneral == 4)
+                    spawnEnemyQuattro();
+                if (respawnGeneral == 5)
+                    spawnEnemyCinque();
+                a1 =false;
             }
         }
     }
@@ -149,7 +158,16 @@ public class CameraGeneraEnemies : MonoBehaviour
                 respawnDueTime = Random.Range(respawnTime+2, respawnTime+3);
                 yield return new WaitForSeconds(respawnDueTime);
                 spawnEnemyDue();
-                b1=false;
+                yield return new WaitForSeconds(respawnTime + (Random.Range(respawnTime + 2, respawnTime + 4)));
+                if (respawnGeneral == 2)
+                    spawnEnemy();
+                if (respawnGeneral == 3)
+                    spawnEnemyTre();
+                if (respawnGeneral == 4)
+                    spawnEnemyQuattro();
+                if (respawnGeneral == 5)
+                    spawnEnemyCinque();
+                b1 =false;
             }
         }
     }
@@ -166,7 +184,16 @@ public class CameraGeneraEnemies : MonoBehaviour
                 respawnTreTime = Random.Range(respawnDueTime+3, respawnDueTime+5);
                 yield return new WaitForSeconds(respawnTreTime);
                 spawnEnemyTre();
-                c1=false;
+                yield return new WaitForSeconds(respawnTime + (Random.Range(respawnTime + 2, respawnTime + 4)));
+                if (respawnGeneral == 2)
+                    spawnEnemyDue();
+                if (respawnGeneral == 3)
+                    spawnEnemy();
+                if (respawnGeneral == 4)
+                    spawnEnemyQuattro();
+                if (respawnGeneral == 5)
+                    spawnEnemyCinque();
+                c1 =false;
             }
         }
     }
@@ -182,7 +209,16 @@ public class CameraGeneraEnemies : MonoBehaviour
                 respawnQuattroTime = Random.Range(respawnTreTime+3, respawnTreTime+4);
                 yield return new WaitForSeconds(respawnQuattroTime);
                 spawnEnemyQuattro();
-                d1=false;
+                yield return new WaitForSeconds(respawnTime + (Random.Range(respawnTime + 2, respawnTime + 4)));
+                if (respawnGeneral == 2)
+                    spawnEnemyDue();
+                if (respawnGeneral == 3)
+                    spawnEnemyTre();
+                if (respawnGeneral == 4)
+                    spawnEnemy();
+                if (respawnGeneral == 5)
+                    spawnEnemyCinque();
+                d1 =false;
             }
         }
     }
@@ -193,7 +229,7 @@ public class CameraGeneraEnemies : MonoBehaviour
     {
         while (true)
         {
-            if(h.health<=5){
+            if(h.health<=49){
                 yield return new WaitForSeconds(20f);
                 spawnEnemyDue();  
             }
@@ -226,6 +262,15 @@ public class CameraGeneraEnemies : MonoBehaviour
                 e1 = true;
                 yield return new WaitForSeconds(6);
                 spawnEnemySette();
+                yield return new WaitForSeconds(respawnTime + (Random.Range(respawnTime + 2, respawnTime + 4)));
+                if (respawnGeneral == 2)
+                    spawnEnemyDue();
+                if (respawnGeneral == 3)
+                    spawnEnemyTre();
+                if (respawnGeneral == 4)
+                    spawnEnemyQuattro();
+                if (respawnGeneral == 5)
+                    spawnEnemy();
                 e1 = false;
             }
         }

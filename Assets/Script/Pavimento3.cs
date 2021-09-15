@@ -8,6 +8,7 @@ public class Pavimento3 : MonoBehaviour
 {   
     public Score v;
     bool ver=false;
+    bool vel = false;
     float tempo=10f;//durta dell'aumento velocità del terreno
     public int velocitaTerreno = 10;
     // Start is called before the first frame update
@@ -25,10 +26,11 @@ public class Pavimento3 : MonoBehaviour
         {
             transform.position =new Vector3(48.33f,transform.position.y,0f);
         }
-        if (((v.scoreK+1)%3==0 || (v.scoreM+1)%4==0) && !ver)
+        if (v.health<100 && velocitaTerreno!=15 )
         {//arrivato a 5 km  la velocità del pavimento aumenta
             ver = true;
             velocitaTerreno += 5;
+
         }
 
         while (tempo<0)

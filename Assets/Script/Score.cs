@@ -1,19 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
 using UnityEngine.UI;
 using System;
 
 public class Score : MonoBehaviour
 {
+    public GameOverScreen gameOverScreen;
+    
     //se perdi puoi scegliere di ricominciare, oppure di andare al menù
     public string loadMenuRestart;
 
     public string loadMenu;
 
+    public string endMenu;
+
     //timer per la vita
     public static float t=5f;//tempo che serve a misurare dopo quanto il conta chilometri si deve aggiornare
-    public static float t1=20f;//tempo timer dopo il quale il personaggio perde vita perché non si nutre
+    public static float t1=50f;//tempo timer dopo il quale il personaggio perde vita perché non si nutre
 
     //Punteggio chilometri
     [SerializeField]
@@ -21,7 +26,10 @@ public class Score : MonoBehaviour
 
     public Text metri;
     public Text chilometri;
-    
+    public Text metriEnd;
+    public Text chilometriEnd;
+
+
     //public Text highScore;
     public int scoreM = 0;//quanti metri
     public int scoreK = 0;//quanti chilometri
@@ -50,6 +58,8 @@ public class Score : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        metriEnd = metri;
+        chilometriEnd = chilometri;
         t -= Time.deltaTime;//scaduto il tempo, i metri aumentano
         bool v=false;
         while(t<0){
@@ -71,15 +81,18 @@ public class Score : MonoBehaviour
 
         t1 -=Time.deltaTime;//se questo tempo scade, la vita si decrementa (NON STAI MANGIANDO)
         while(t1<0){
-            DelVita(25);
-            t1=20;
+            DelVita(5);
+            t1=50;
         }
 
         if(health==0)
         {
             //ScriptName sn = gameObject.GetComponent<PauseMenu>();
-           // sn.PauseUnpause();
-            Application.LoadLevel (loadMenu);
+            // sn.PauseUnpause();
+            PauseGame();
+            gameOverScreen.SetUp(scoreK, scoreM);
+            //Application.LoadLevel(loadMenu);
+            
         }
         
     }
@@ -87,17 +100,17 @@ public class Score : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         Destroy(other.gameObject);
-        if(health>=20){//se la vita è maggiore di un certo valore, allora tutto normale
+        if(health>=1 && health<=100){//se la vita è maggiore di un certo valore, allora tutto normale
             if(other.gameObject.tag=="good")
             {
-                AddScore(25);
-                t1=7;//ogni volta che il personaggio mangia il timer si resetta 
+                AddScore(5);
+                t1=50;//ogni volta che il personaggio mangia il timer si resetta 
             }
 
             if (other.gameObject.tag =="bad")
             {
-                DelVita(25);
-                t1=7;//ogni volta che il personaggio mangia il timer si resetta
+                DelVita(50);
+                t1=50;//ogni volta che il personaggio mangia il timer si resetta
             }
 
             if (other.gameObject.tag =="god")
@@ -105,25 +118,25 @@ public class Score : MonoBehaviour
                 //DelScore();
                 float ripristino=maxhealth-healtCurrent;
                 AddScore(ripristino);
-                t1=7;//ogni volta che il personaggio mangia, il timer si resetta 
+                t1=50;//ogni volta che il personaggio mangia, il timer si resetta 
             }
 
             if (other.gameObject.tag =="water")
             {
-                AddScore(25);
-                t1=7;//ogni volta che il personaggio mangia, il timer si resetta 
+                AddScore(5);
+                t1=50;//ogni volta che il personaggio mangia, il timer si resetta 
             }
         }
     }
 
     void AddScore(float a)//aggiungi il punteggio specificato dalla variabile a e, inoltre, in base alla percentuale della vita, aggiorna il colore della barra
     {
-        if(health>0 && health!=100){
+        if(health>0 && health!=100 && (health+a)<=100){
             health +=a;
             healtCurrent = (health * barWidth) / maxhealth;
             healthBar.rectTransform.sizeDelta = new Vector2(healtCurrent, barHeight);
 
-            if(health>75 && health<100){
+            if(health>75 && health<=100){
                     healthBar.GetComponent<Image>().color = new Color32(35,255,0,255);//verde
             }
             if(health>50 && health<=75){
@@ -163,4 +176,10 @@ public class Score : MonoBehaviour
             health=0;
         }
     }
+    void PauseGame()
+    {
+        Time.timeScale = 0;
+    }
+
+
 }
