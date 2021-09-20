@@ -752,6 +752,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68e147d8456a3c842b42c9fd2a45b1b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  v: {fileID: 1816010525}
   velocitaTerreno: 6
 --- !u!1 &229799776
 GameObject:
@@ -1561,8 +1562,16 @@ MonoBehaviour:
     type: 3}
   Bobs: {fileID: 2638321928545934993, guid: 62a13b95410c53f40b356e972a4f05d6, type: 3}
   water: {fileID: 997815504473373577, guid: ca5a1f49f92bf15499302403c55eb050, type: 3}
-  platform: {fileID: 3074349521362558477, guid: 3ab608106e558d54989ad369660e770d,
+  platform: {fileID: 2159907916923427379, guid: 7349c17f27bda314a93d3cc04f039334,
     type: 3}
+  melanzana: {fileID: 7413494298565138327, guid: 508b63acdd304db48a86df7c0825306a,
+    type: 3}
+  carne: {fileID: 6477568902663500012, guid: ba88e2498035e5945bf6df8dd4580a41, type: 3}
+  uva: {fileID: 2662910391354879485, guid: 65f3d3af8ce8c1446963f2d0c6f1ec5e, type: 3}
+  pollo: {fileID: 5626885382712243982, guid: 980ba8c62d472be4f9f724ce48c4e7ec, type: 3}
+  lecca: {fileID: 6244012927820465986, guid: 81acc3ca08479a244809eb21085d24a9, type: 3}
+  mov: {fileID: 3620432116489944282, guid: 7349c17f27bda314a93d3cc04f039334, type: 3}
+  s: {fileID: 1816010525}
   h: {fileID: 1816010525}
 --- !u!20 &519420031
 Camera:
@@ -2506,6 +2515,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68e147d8456a3c842b42c9fd2a45b1b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  v: {fileID: 1816010525}
   velocitaTerreno: 6
 --- !u!212 &1020696884
 SpriteRenderer:
@@ -5244,7 +5254,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.75
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 3
@@ -5339,9 +5349,9 @@ MonoBehaviour:
   chilometri: {fileID: 2051890162}
   metriEnd: {fileID: 0}
   chilometriEnd: {fileID: 0}
-  scoreM: 42
+  scoreM: 0
   scoreK: 0
-  health: 0
+  health: 100
 --- !u!68 &1816010526
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -5365,6 +5375,18 @@ EdgeCollider2D:
   - {x: -2.2188103, y: 2.9988837}
   - {x: -2.3032508, y: 1.3890511}
   - {x: -2.2765255, y: 0.8190491}
+--- !u!114 &1816010527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1816010516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b870884bd130e16428179f56e198310b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1820267590
 GameObject:
   m_ObjectHideFlags: 0

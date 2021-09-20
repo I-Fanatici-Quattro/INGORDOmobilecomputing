@@ -5,7 +5,7 @@ ScriptsOnlyBuild:
     - BackGroundMove
     - CameraGeneraEnemies
     - CharacterController2D
-    - DArts.DALimb
+    - DatiScena
     - Disable
     - GameOverScreen
     - MainMenu
@@ -31,6 +31,95 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Text
     - UnityEngine.UI.VerticalLayoutGroup
   sceneClasses:
+    Assets/Scenes/GordoDue.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 50
+      Script: {instanceID: 0}
+    - Class: 58
+      Script: {instanceID: 0}
+    - Class: 61
+      Script: {instanceID: 0}
+    - Class: 62
+      Script: {instanceID: 0}
+    - Class: 68
+      Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 11232}
+    - Class: 114
+      Script: {instanceID: 11252}
+    - Class: 114
+      Script: {instanceID: 11256}
+    - Class: 114
+      Script: {instanceID: 11356}
+    - Class: 114
+      Script: {instanceID: 11374}
+    - Class: 114
+      Script: {instanceID: 11428}
+    - Class: 114
+      Script: {instanceID: 11468}
+    - Class: 114
+      Script: {instanceID: 11642}
+    - Class: 114
+      Script: {instanceID: 11868}
+    - Class: 114
+      Script: {instanceID: 11880}
+    - Class: 114
+      Script: {instanceID: 12258}
+    - Class: 114
+      Script: {instanceID: 12340}
+    - Class: 114
+      Script: {instanceID: 12354}
+    - Class: 114
+      Script: {instanceID: 12400}
+    - Class: 114
+      Script: {instanceID: 12812}
+    - Class: 114
+      Script: {instanceID: 13118}
+    - Class: 114
+      Script: {instanceID: 13140}
+    - Class: 114
+      Script: {instanceID: 13208}
+    - Class: 114
+      Script: {instanceID: 13226}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 212
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
     Assets/Scenes/InGordo.unity:
     - Class: 1
       Script: {instanceID: 0}
@@ -71,37 +160,39 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11256}
     - Class: 114
-      Script: {instanceID: 11358}
+      Script: {instanceID: 11356}
     - Class: 114
-      Script: {instanceID: 11376}
+      Script: {instanceID: 11374}
     - Class: 114
-      Script: {instanceID: 11430}
+      Script: {instanceID: 11428}
     - Class: 114
-      Script: {instanceID: 11470}
+      Script: {instanceID: 11468}
     - Class: 114
-      Script: {instanceID: 11640}
+      Script: {instanceID: 11642}
     - Class: 114
-      Script: {instanceID: 11862}
+      Script: {instanceID: 11868}
     - Class: 114
-      Script: {instanceID: 11874}
+      Script: {instanceID: 11880}
     - Class: 114
-      Script: {instanceID: 12250}
-    - Class: 114
-      Script: {instanceID: 12326}
+      Script: {instanceID: 12258}
     - Class: 114
       Script: {instanceID: 12340}
     - Class: 114
-      Script: {instanceID: 12384}
+      Script: {instanceID: 12354}
     - Class: 114
-      Script: {instanceID: 12798}
+      Script: {instanceID: 12400}
     - Class: 114
-      Script: {instanceID: 13096}
+      Script: {instanceID: 12660}
     - Class: 114
-      Script: {instanceID: 13116}
+      Script: {instanceID: 12812}
     - Class: 114
-      Script: {instanceID: 13180}
+      Script: {instanceID: 13118}
     - Class: 114
-      Script: {instanceID: 13196}
+      Script: {instanceID: 13140}
+    - Class: 114
+      Script: {instanceID: 13208}
+    - Class: 114
+      Script: {instanceID: 13226}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -137,8 +228,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 82
       Script: {instanceID: 0}
-    - Class: 83
-      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
@@ -148,23 +237,23 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11256}
     - Class: 114
-      Script: {instanceID: 11430}
+      Script: {instanceID: 11428}
     - Class: 114
-      Script: {instanceID: 11470}
+      Script: {instanceID: 11468}
     - Class: 114
-      Script: {instanceID: 11640}
+      Script: {instanceID: 11642}
     - Class: 114
-      Script: {instanceID: 11874}
+      Script: {instanceID: 11880}
     - Class: 114
-      Script: {instanceID: 12384}
+      Script: {instanceID: 12400}
     - Class: 114
-      Script: {instanceID: 12658}
+      Script: {instanceID: 12670}
     - Class: 114
-      Script: {instanceID: 12798}
+      Script: {instanceID: 12812}
     - Class: 114
-      Script: {instanceID: 13044}
+      Script: {instanceID: 13062}
     - Class: 114
-      Script: {instanceID: 13180}
+      Script: {instanceID: 13208}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -218,8 +307,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 82
       Script: {instanceID: 0}
-    - Class: 83
-      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
@@ -229,25 +316,25 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11256}
     - Class: 114
-      Script: {instanceID: 11430}
+      Script: {instanceID: 11428}
     - Class: 114
-      Script: {instanceID: 11470}
+      Script: {instanceID: 11468}
     - Class: 114
-      Script: {instanceID: 11640}
+      Script: {instanceID: 11642}
     - Class: 114
-      Script: {instanceID: 11862}
+      Script: {instanceID: 11868}
     - Class: 114
-      Script: {instanceID: 11874}
+      Script: {instanceID: 11880}
     - Class: 114
-      Script: {instanceID: 12152}
+      Script: {instanceID: 12156}
     - Class: 114
-      Script: {instanceID: 12384}
+      Script: {instanceID: 12400}
     - Class: 114
-      Script: {instanceID: 12658}
+      Script: {instanceID: 12670}
     - Class: 114
-      Script: {instanceID: 12798}
+      Script: {instanceID: 12812}
     - Class: 114
-      Script: {instanceID: 13180}
+      Script: {instanceID: 13208}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -543,12 +630,6 @@ ScriptsOnlyBuild:
     className: NuovoBG
   - hash:
       serializedVersion: 2
-      Hash: cae7c815702b959a34e38d5d3f07ebed
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: DArts
-    className: DASkeleton
-  - hash:
-      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: NativeShare.Runtime.dll
     namespaceName: NativeShareNamespace
@@ -565,18 +646,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: SignalTrack
-  - hash:
-      serializedVersion: 2
-      Hash: c945ddb66548d6ef280d545f50cc241a
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Vita
-  - hash:
-      serializedVersion: 2
-      Hash: 7cf5abcab28132b7f7fe6e369cb347b5
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: DArts
-    className: DALimb
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -609,7 +678,7 @@ ScriptsOnlyBuild:
     className: RawImage
   - hash:
       serializedVersion: 2
-      Hash: 223c449df88b06b0a5b9abdcd0b9899d
+      Hash: dd05c11dd8829392da99dede654e6afc
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: BackGroundMove
@@ -637,12 +706,6 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CameraPunta
-  - hash:
-      serializedVersion: 2
-      Hash: 64b05882ed9438e97903b4bf438e9197
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: DArts
-    className: DAChkBox
   - hash:
       serializedVersion: 2
       Hash: 783f593b9380cf72d0f7ebfd4a0d4bcd
@@ -693,6 +756,12 @@ ScriptsOnlyBuild:
     className: TimelineAsset
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DatiScena
+  - hash:
+      serializedVersion: 2
       Hash: cbb89d05a2b0422447c6b38c8f5f137d
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -729,12 +798,6 @@ ScriptsOnlyBuild:
     className: PlayerMovements
   - hash:
       serializedVersion: 2
-      Hash: 971efddb2bdc726c74917c1e2c02608a
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: DArts
-    className: GordoDemo
-  - hash:
-      serializedVersion: 2
       Hash: 8e6ceabfd38a184413d69b7db56c89cc
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools
@@ -745,12 +808,6 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameManager
-  - hash:
-      serializedVersion: 2
-      Hash: f1e1aa96a64fb62b89ea3892af9843d9
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: DArts
-    className: DALogo
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
@@ -807,7 +864,7 @@ ScriptsOnlyBuild:
     className: BaseInput
   - hash:
       serializedVersion: 2
-      Hash: fadfd929bd6cd0840809f96fd71fa626
+      Hash: 0587f40181f746fd85375ba344d7bf77
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerMovement
@@ -894,4 +951,5 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Pause Menu.unity
   - Assets/Scenes/InGordo.unity
   - Assets/Scenes/Main Menu.unity
-  playerPath: C:/Users/user/OneDrive/Documenti/sett2gordo.apk
+  - Assets/Scenes/GordoDue.unity
+  playerPath: C:/Users/user/OneDrive/Documenti/nuovo.apk

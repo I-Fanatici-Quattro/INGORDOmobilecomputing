@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Main Menu.unity
     guid: 4928d5e231804074783999d4c2e8ee35
+  - enabled: 1
+    path: Assets/Scenes/GordoDue.unity
+    guid: 895d53381f3b4bb428f17e6feb54c735
   m_configObjects: {}
