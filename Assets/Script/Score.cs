@@ -19,6 +19,7 @@ public class Score : MonoBehaviour
     //timer per la vita
     public static float t=5f;//tempo che serve a misurare dopo quanto il conta chilometri si deve aggiornare
     public static float t1=50f;//tempo timer dopo il quale il personaggio perde vita perché non si nutre
+    public static float t2 = 2f;
 
     //Punteggio chilometri
     [SerializeField]
@@ -37,9 +38,9 @@ public class Score : MonoBehaviour
     //vita Personaggio
     float maxhealth=100;
 
-   
 
-    public float health;
+
+    public float health = 100;
 
     Image healthBar;
     float barWidth,barHeight,healtCurrent;
@@ -47,13 +48,25 @@ public class Score : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        healthBar= GameObject.FindGameObjectWithTag("barraVita").GetComponent<Image>();
-        health=maxhealth;
+        health =maxhealth;
+        healthBar = GameObject.FindGameObjectWithTag("barraVita").GetComponent<Image>();
+       
 
-        barWidth=healthBar.rectTransform.sizeDelta.x;
+        barWidth =healthBar.rectTransform.sizeDelta.x;
         barHeight= healthBar.rectTransform.sizeDelta.y;
-        
+        //health = Getint("health");
     }
+
+        public void SetInt(string KeyName, float Value)
+        {
+            PlayerPrefs.SetFloat(KeyName, Value);
+        }
+
+        public float Getint(string KeyName)
+        {
+            return PlayerPrefs.GetFloat(KeyName);
+        }
+ 
 
     // Update is called once per frame
     void Update()
@@ -76,8 +89,13 @@ public class Score : MonoBehaviour
                 chilometri.text = scoreK.ToString();
 
             }
+            if (scoreM == 8)
+            {
+                Application.LoadLevel("SecondShene");
+            }
             t=5;
         }
+
 
         t1 -=Time.deltaTime;//se questo tempo scade, la vita si decrementa (NON STAI MANGIANDO)
         while(t1<0){
@@ -95,17 +113,36 @@ public class Score : MonoBehaviour
             //Application.LoadLevel(loadMenu);
             
         }
+
         
+        /*if (transform.position.x < -7.7750f || transform.position.y < -4.066806f)
+        {
+            t2 -= Time.deltaTime;
+            while (t2 < 0)
+            {
+
+            transform.position = new Vector2(-7.7729f, -3.066806f);
+            DelVita(25);
+            t2 = 2f;
+            }*/
+
+
+
     }
+
+
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Destroy(other.gameObject);
+        if (other.gameObject.tag != "plat")
+        {
+            Destroy(other.gameObject);
+        }
         if(health>=1 && health<=100){//se la vita è maggiore di un certo valore, allora tutto normale
             if(other.gameObject.tag=="good")
             {
                 AddScore(25);
-                t1=50;//ogni volta che il personaggio mangia il timer si resetta 
+                t1 =50;//ogni volta che il personaggio mangia il timer si resetta 
             }
 
             if (other.gameObject.tag =="bad")
@@ -134,6 +171,7 @@ public class Score : MonoBehaviour
     {
         if(health>0 && health!=100 && (health+a)<=100){
             health +=a;
+            
             healtCurrent = (health * barWidth) / maxhealth;
             healthBar.rectTransform.sizeDelta = new Vector2(healtCurrent, barHeight);
 
@@ -154,8 +192,7 @@ public class Score : MonoBehaviour
     {
         
         health -=b;
-
-        if(health>75){
+        if (health>75){
             healtCurrent = (health * barWidth) / maxhealth;
             healthBar.rectTransform.sizeDelta = new Vector2(healtCurrent, barHeight);
         }
@@ -181,6 +218,4 @@ public class Score : MonoBehaviour
     {
         Time.timeScale = 0;
     }
-
-
 }

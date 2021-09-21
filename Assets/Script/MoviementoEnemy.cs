@@ -5,7 +5,7 @@ using UnityEngine;
 public class MoviementoEnemy : MonoBehaviour
 {
     [SerializeField]
-    float speed = 10.0f;
+    public float speed = 10.0f;
     private Rigidbody2D rb;
     Vector2 screenBounds;
     //public float Rotazione=50.0f;
@@ -26,21 +26,27 @@ public class MoviementoEnemy : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+
     }
 
     void OnCollisionEnter2D(Collision2D coll)
     {
-
-        if (coll.gameObject.tag == "MainCamera")
+        
+        if (coll.gameObject.tag == "MainCamera" )
         {
-            Destroy(this.gameObject);
+            if (this.gameObject.tag != "plat")
+            {
+                Destroy(this.gameObject);
+            }
         }
 
         if (coll.gameObject.tag == "Player")
         {
-            Destroy(this.gameObject);
+            if (this.gameObject.tag != "plat")
+            {
+                Destroy(this.gameObject);
+            }
         }
-
 
     }
 }

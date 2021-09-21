@@ -12,6 +12,7 @@ TagManager:
   - floor
   - god
   - water
+  - plat
   layers:
   - Default
   - TransparentFX
