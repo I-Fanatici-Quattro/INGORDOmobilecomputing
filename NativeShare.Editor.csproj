@@ -252,6 +252,9 @@
  <Reference Include="UnityEditor.Android.Extensions">
  <HintPath>D:/Programmi/Unity/2019.4.13f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll</HintPath>
  </Reference>
+ <Reference Include="UnityEditor.UWP.Extensions">
+ <HintPath>D:/Programmi/Unity/2019.4.13f1/Editor/Data/PlaybackEngines/MetroSupport/UnityEditor.UWP.Extensions.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEditor.iOS.Extensions">
  <HintPath>D:/Programmi/Unity/2019.4.13f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll</HintPath>
  </Reference>

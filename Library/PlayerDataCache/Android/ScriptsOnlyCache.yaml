@@ -14,6 +14,7 @@ ScriptsOnlyBuild:
     - Pavimento3
     - PlayerMovement
     - Score
+    - ShareOnSocialMedia
     - SnsShare
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
@@ -56,7 +57,11 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 74
       Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
     - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
       Script: {instanceID: 0}
     - Class: 91
       Script: {instanceID: 0}
@@ -65,11 +70,11 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11232}
+      Script: {instanceID: 11234}
     - Class: 114
-      Script: {instanceID: 11252}
+      Script: {instanceID: 11254}
     - Class: 114
-      Script: {instanceID: 11256}
+      Script: {instanceID: 11258}
     - Class: 114
       Script: {instanceID: 11358}
     - Class: 114
@@ -79,29 +84,33 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11470}
     - Class: 114
-      Script: {instanceID: 11640}
+      Script: {instanceID: 11644}
     - Class: 114
-      Script: {instanceID: 11862}
+      Script: {instanceID: 11870}
     - Class: 114
-      Script: {instanceID: 11874}
+      Script: {instanceID: 11882}
     - Class: 114
-      Script: {instanceID: 12250}
+      Script: {instanceID: 12260}
     - Class: 114
-      Script: {instanceID: 12326}
+      Script: {instanceID: 12342}
     - Class: 114
-      Script: {instanceID: 12340}
+      Script: {instanceID: 12356}
     - Class: 114
-      Script: {instanceID: 12384}
+      Script: {instanceID: 12402}
     - Class: 114
-      Script: {instanceID: 12798}
+      Script: {instanceID: 12670}
     - Class: 114
-      Script: {instanceID: 13096}
+      Script: {instanceID: 12812}
     - Class: 114
-      Script: {instanceID: 13116}
+      Script: {instanceID: 13066}
     - Class: 114
-      Script: {instanceID: 13180}
+      Script: {instanceID: 13120}
     - Class: 114
-      Script: {instanceID: 13196}
+      Script: {instanceID: 13142}
+    - Class: 114
+      Script: {instanceID: 13210}
+    - Class: 114
+      Script: {instanceID: 13228}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -109,6 +118,10 @@ ScriptsOnlyBuild:
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 198
+      Script: {instanceID: 0}
+    - Class: 199
       Script: {instanceID: 0}
     - Class: 212
       Script: {instanceID: 0}
@@ -119,6 +132,12 @@ ScriptsOnlyBuild:
     - Class: 223
       Script: {instanceID: 0}
     - Class: 224
+      Script: {instanceID: 0}
+    - Class: 241
+      Script: {instanceID: 0}
+    - Class: 243
+      Script: {instanceID: 0}
+    - Class: 245
       Script: {instanceID: 0}
     Assets/Scenes/Main Menu.unity:
     - Class: 1
@@ -144,27 +163,27 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11232}
+      Script: {instanceID: 11234}
     - Class: 114
-      Script: {instanceID: 11256}
+      Script: {instanceID: 11258}
     - Class: 114
       Script: {instanceID: 11430}
     - Class: 114
       Script: {instanceID: 11470}
     - Class: 114
-      Script: {instanceID: 11640}
+      Script: {instanceID: 11644}
     - Class: 114
-      Script: {instanceID: 11874}
+      Script: {instanceID: 11882}
     - Class: 114
-      Script: {instanceID: 12384}
+      Script: {instanceID: 12402}
     - Class: 114
-      Script: {instanceID: 12658}
+      Script: {instanceID: 12670}
     - Class: 114
-      Script: {instanceID: 12798}
+      Script: {instanceID: 12812}
     - Class: 114
-      Script: {instanceID: 13044}
+      Script: {instanceID: 13062}
     - Class: 114
-      Script: {instanceID: 13180}
+      Script: {instanceID: 13210}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -225,29 +244,29 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11232}
+      Script: {instanceID: 11234}
     - Class: 114
-      Script: {instanceID: 11256}
+      Script: {instanceID: 11258}
     - Class: 114
       Script: {instanceID: 11430}
     - Class: 114
       Script: {instanceID: 11470}
     - Class: 114
-      Script: {instanceID: 11640}
+      Script: {instanceID: 11644}
     - Class: 114
-      Script: {instanceID: 11862}
+      Script: {instanceID: 11870}
     - Class: 114
-      Script: {instanceID: 11874}
+      Script: {instanceID: 11882}
     - Class: 114
-      Script: {instanceID: 12152}
+      Script: {instanceID: 12158}
     - Class: 114
-      Script: {instanceID: 12384}
+      Script: {instanceID: 12402}
     - Class: 114
-      Script: {instanceID: 12658}
+      Script: {instanceID: 12670}
     - Class: 114
-      Script: {instanceID: 12798}
+      Script: {instanceID: 12812}
     - Class: 114
-      Script: {instanceID: 13180}
+      Script: {instanceID: 13210}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -777,6 +796,12 @@ ScriptsOnlyBuild:
     className: MainMenu
   - hash:
       serializedVersion: 2
+      Hash: 23edeff4cb09d1633870b02e1b799c44
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ShareOnSocialMedia
+  - hash:
+      serializedVersion: 2
       Hash: 8cd1cbba27f3cb1717254f668e9e0d5a
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -807,7 +832,7 @@ ScriptsOnlyBuild:
     className: BaseInput
   - hash:
       serializedVersion: 2
-      Hash: fadfd929bd6cd0840809f96fd71fa626
+      Hash: 0587f40181f746fd85375ba344d7bf77
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerMovement
@@ -894,4 +919,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Pause Menu.unity
   - Assets/Scenes/InGordo.unity
   - Assets/Scenes/Main Menu.unity
-  playerPath: C:/Users/user/OneDrive/Documenti/sett2gordo.apk
+  playerPath: C:/Users/Fiat Panda/Documents/GitHub/InGordo.apk

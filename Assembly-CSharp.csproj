@@ -85,6 +85,7 @@
      <Compile Include="Assets\Scripts\MainMenu.cs" />
      <Compile Include="Assets\Scripts\PauseMenu.cs" />
      <Compile Include="Assets\Scripts\SnsShare.cs" />
+     <Compile Include="Assets\ShareOnSocialMedia.cs" />
      <Compile Include="Assets\Vita.cs" />
      <Compile Include="Assets\timerPunteggio.cs" />
      <None Include="Assets\Udemy UI Starter\Font\About.txt" />
