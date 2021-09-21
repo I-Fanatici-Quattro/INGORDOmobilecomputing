@@ -89,10 +89,7 @@ public class Score : MonoBehaviour
                 chilometri.text = scoreK.ToString();
 
             }
-            if (scoreM == 8)
-            {
-                Application.LoadLevel("SecondShene");
-            }
+            
             t=5;
         }
 
