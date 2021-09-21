@@ -89,12 +89,13 @@ public class Score : MonoBehaviour
                 chilometri.text = scoreK.ToString();
 
             }
-            /*if (scoreM == 8)
+            if (scoreM == 8)
             {
-                Application.LoadLevel("GordoDue");
-            }*/
+                Application.LoadLevel("SecondShene");
+            }
             t=5;
         }
+
 
         t1 -=Time.deltaTime;//se questo tempo scade, la vita si decrementa (NON STAI MANGIANDO)
         while(t1<0){
@@ -114,7 +115,7 @@ public class Score : MonoBehaviour
         }
 
         
-        if (transform.position.x < -7.7750f || transform.position.y < -4.066806f)
+        /*if (transform.position.x < -7.7750f || transform.position.y < -4.066806f)
         {
             t2 -= Time.deltaTime;
             while (t2 < 0)
@@ -123,13 +124,13 @@ public class Score : MonoBehaviour
             transform.position = new Vector2(-7.7729f, -3.066806f);
             DelVita(25);
             t2 = 2f;
-            }
-            
-        }
+            }*/
 
 
 
     }
+
+
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -217,7 +218,4 @@ public class Score : MonoBehaviour
     {
         Time.timeScale = 0;
     }
-
-
-
 }
