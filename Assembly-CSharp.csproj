@@ -57,6 +57,11 @@
   <ItemGroup>
      <Compile Include="Assets\GameManager.cs" />
      <Compile Include="Assets\GameOverScreen.cs" />
+     <Compile Include="Assets\Gordo\Demo\Prefabs\DAChkBox\Scripts\DAChkBox.cs" />
+     <Compile Include="Assets\Gordo\Demo\Scripts\GordoDemo.cs" />
+     <Compile Include="Assets\Gordo\Prefabs\DALogo\Scripts\DALogo.cs" />
+     <Compile Include="Assets\Gordo\Prefabs\DASkeleton\Scripts\DALimb.cs" />
+     <Compile Include="Assets\Gordo\Prefabs\DASkeleton\Scripts\DASkeleton.cs" />
      <Compile Include="Assets\Scenes\DatiScena.cs" />
      <Compile Include="Assets\Script\BackGroundMove.cs" />
      <Compile Include="Assets\Script\CameraGeneraEnemies.cs" />
@@ -72,6 +77,7 @@
      <Compile Include="Assets\Script\Pavimento2.cs" />
      <Compile Include="Assets\Script\Pavimento3.cs" />
      <Compile Include="Assets\Script\PlayerMovement.cs" />
+     <Compile Include="Assets\Script\PlayerMovements.cs" />
      <Compile Include="Assets\Script\Score.cs" />
      <Compile Include="Assets\Script\ScoreScenaDue.cs" />
      <Compile Include="Assets\Scripts\AudioManager.cs" />
@@ -80,6 +86,8 @@
      <Compile Include="Assets\Scripts\MainMenu.cs" />
      <Compile Include="Assets\Scripts\PauseMenu.cs" />
      <Compile Include="Assets\Scripts\SnsShare.cs" />
+     <Compile Include="Assets\ShareOnSocialMedia.cs" />
+     <Compile Include="Assets\Vita.cs" />
      <Compile Include="Assets\movimentoSecondScene.cs" />
      <Compile Include="Assets\timerPunteggio.cs" />
      <None Include="Assets\Udemy UI Starter\Font\About.txt" />
